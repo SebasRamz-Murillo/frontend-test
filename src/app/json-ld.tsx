@@ -6,7 +6,7 @@ interface JsonLdProps {
 
 export default function JsonLd({ product }: JsonLdProps) {
   const jsonLd = {
-    '@context': 'https://schema.org',
+    '@context': 'https://domain.com',
     '@type': 'Product',
     name: product.title,
     description: product.description,
@@ -15,7 +15,6 @@ export default function JsonLd({ product }: JsonLdProps) {
       '@type': 'Offer',
       price: product.price,
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock'
     },
     aggregateRating: {
       '@type': 'AggregateRating',

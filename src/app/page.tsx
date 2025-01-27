@@ -67,13 +67,13 @@ export default function Home() {
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
     setPage(1);
-    setIsLoadingMore(false); // Reiniciar isLoadingMore al buscar
+    setIsLoadingMore(false); // restart isLoadingMore when searching
   };
 
   const handleSort = (e: ChangeEvent<HTMLSelectElement>) => {
     setSortBy(e.target.value as 'price' | 'rating');
     setPage(1);
-    setIsLoadingMore(false); // Reiniciar isLoadingMore al cambiar el orden
+    setIsLoadingMore(false); // restart isLoadingMore when sorting
   };
 
   if (isLoading) {
